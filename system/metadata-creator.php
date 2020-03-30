@@ -1,7 +1,7 @@
 <?php
 $logindata = json_decode(file_get_contents('../config.json'), true);
-$logindatauser = $logindata[user];
-$logindatapass =$logindata[pass];
+$logindatauser = $logindata['user'];
+$logindatapass =$logindata['pass'];
 if ($_COOKIE['login'] == true) {}else{
 	header("Location: ../login/");
 }

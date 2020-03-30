@@ -2,15 +2,15 @@
 if ($_GET['action'] == 'logout') {
   $logindata = json_decode(file_get_contents('./config.json'), true);
   setcookie('login');
-  setcookie($logindata[user]);
-  setcookie($logindata[pass]);
+  setcookie($logindata['user']);
+  setcookie($logindata['pass']);
   header("Location: ./login/");
 }
 
-if (!isset($_POST[user])) {
+if (!isset($_POST['user'])) {
   die('빈 값');
 }
-if (!isset($_POST[pass])) {
+if (!isset($_POST['pass'])) {
   die('빈 값');
 }
 
